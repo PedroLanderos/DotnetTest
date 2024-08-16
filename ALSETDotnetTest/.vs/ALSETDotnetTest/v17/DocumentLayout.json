@@ -3,28 +3,44 @@
   "WorkspaceRootPath": "D:\\Code\\ALSET\\ALSETDotnetTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\models\\maindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\models\\maindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\controllers\\researcherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\controllers\\researcherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\models\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\models\\researcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\views\\researchers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\views\\researchers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\models\\maindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\models\\maindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|d:\\code\\alset\\alsetdotnettest\\alsetdotnettest\\migrations\\20240816061436_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E742C519-EEEC-46AC-A1D9-BD609EB2A39C}|ALSETDotnetTest\\ALSETDotnetTest.csproj|solutionrelative:alsetdotnettest\\migrations\\20240816061436_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,13 +54,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainDBContext.cs",
               "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\MainDBContext.cs",
               "RelativeDocumentMoniker": "ALSETDotnetTest\\Models\\MainDBContext.cs",
               "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\MainDBContext.cs",
               "RelativeToolTip": "ALSETDotnetTest\\Models\\MainDBContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACQAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA4wBsAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-16T05:51:16.396Z",
               "IsPinned": true,
@@ -53,19 +69,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20240816061436_InitialCreate.cs",
-              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
-              "RelativeDocumentMoniker": "ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
-              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
-              "RelativeToolTip": "ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Title": "ResearchersController.cs",
+              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Controllers\\ResearchersController.cs",
+              "RelativeDocumentMoniker": "ALSETDotnetTest\\Controllers\\ResearchersController.cs",
+              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Controllers\\ResearchersController.cs*",
+              "RelativeToolTip": "ALSETDotnetTest\\Controllers\\ResearchersController.cs*",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAgwHQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:14:36.872Z",
+              "WhenOpened": "2024-08-16T06:59:30.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Researcher.cs",
+              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\Researcher.cs",
+              "RelativeDocumentMoniker": "ALSETDotnetTest\\Models\\Researcher.cs",
+              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\Researcher.cs",
+              "RelativeToolTip": "ALSETDotnetTest\\Models\\Researcher.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAswAwAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:08:00.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Views\\Researchers\\Create.cshtml",
+              "RelativeDocumentMoniker": "ALSETDotnetTest\\Views\\Researchers\\Create.cshtml",
+              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Views\\Researchers\\Create.cshtml",
+              "RelativeToolTip": "ALSETDotnetTest\\Views\\Researchers\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T07:00:38.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ALSETDotnetTest\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ALSETDotnetTest\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:58:08.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20240816061436_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
+              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
+              "RelativeToolTip": "ALSETDotnetTest\\Migrations\\20240816061436_InitialCreate.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAQwFAAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T06:14:36.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Subscription.cs",
               "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\Subscription.cs",
               "RelativeDocumentMoniker": "ALSETDotnetTest\\Models\\Subscription.cs",
@@ -73,25 +139,23 @@
               "RelativeToolTip": "ALSETDotnetTest\\Models\\Subscription.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:08:26.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Researcher.cs",
-              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\Researcher.cs",
-              "RelativeDocumentMoniker": "ALSETDotnetTest\\Models\\Researcher.cs",
-              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Models\\Researcher.cs",
-              "RelativeToolTip": "ALSETDotnetTest\\Models\\Researcher.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAswBcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:08:00.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T06:08:26.531Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ALSETDotnetTest\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ALSETDotnetTest\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T07:00:49.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\Program.cs",
               "RelativeDocumentMoniker": "ALSETDotnetTest\\Program.cs",
@@ -99,12 +163,11 @@
               "RelativeToolTip": "ALSETDotnetTest\\Program.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAmwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-16T06:02:57.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T06:02:57.758Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Code\\ALSET\\ALSETDotnetTest\\ALSETDotnetTest\\appsettings.json",
               "RelativeDocumentMoniker": "ALSETDotnetTest\\appsettings.json",
@@ -112,8 +175,7 @@
               "RelativeToolTip": "ALSETDotnetTest\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-16T06:01:00.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-16T06:01:00.925Z"
             }
           ]
         }
