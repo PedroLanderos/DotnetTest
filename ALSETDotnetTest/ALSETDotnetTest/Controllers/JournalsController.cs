@@ -126,6 +126,33 @@ namespace ALSETDotnetTest.Controllers
             return View();
         }
 
+        //view the pdf
+        [HttpGet]
+        public IActionResult ViewPDF(int id)
+        {
+            // Obtener el registro del journal en la base de datos
+            var journal = _context.Journals.FirstOrDefault(j => j.JournalId == id);
+            if (journal == null)
+            {
+                return NotFound();
+            }
+
+            // Ruta completa del archivo
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), journal.FilePath);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            // Leer el archivo como bytes
+            var fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+            return File(fileBytes, "application/pdf");
+        }
+
+
+
 
         // GET: Journals/Edit/5
         public async Task<IActionResult> Edit(int? id)
