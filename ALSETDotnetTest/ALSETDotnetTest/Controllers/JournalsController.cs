@@ -11,6 +11,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using ImageMagick;
 using System.IO;
+using Microsoft.JSInterop.Implementation;
 
 namespace ALSETDotnetTest.Controllers
 {
@@ -26,8 +27,8 @@ namespace ALSETDotnetTest.Controllers
         // GET: Journals
         public async Task<IActionResult> Index()
         {
-            var mainDBContext = _context.Journals.Include(j => j.Researcher);
-            return View(await mainDBContext.ToListAsync());
+            var journals = await _context.Journals.ToListAsync();
+            return Ok(journals);
         }
 
         // GET: Journals/Details/5

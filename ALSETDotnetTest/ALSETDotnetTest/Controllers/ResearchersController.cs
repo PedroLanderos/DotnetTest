@@ -21,7 +21,8 @@ namespace ALSETDotnetTest.Controllers
         // GET: Researchers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Researchers.ToListAsync());
+            var researchers = await _context.Researchers.ToListAsync();
+            return Ok(researchers);  // Devuelve los datos en formato JSON
         }
 
         // GET: Researchers/Details/5
@@ -39,7 +40,7 @@ namespace ALSETDotnetTest.Controllers
                 return NotFound();
             }
 
-            return View(researcher);
+            return Ok(researcher);
         }
 
         // GET: Researchers/Create
@@ -53,7 +54,7 @@ namespace ALSETDotnetTest.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         // [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name")] Researcher researcher)
+        public async Task<IActionResult> Create([FromBody] Researcher researcher)
         {
             //get the current date
             researcher.JoinedDate = DateTime.Now;
