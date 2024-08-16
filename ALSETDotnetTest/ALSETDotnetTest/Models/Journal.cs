@@ -23,9 +23,9 @@ namespace ALSETDotnetTest.Models
         [Column(TypeName = "nvarchar(500)")]
         public string Description { get; set; }
 
-        public DateTime UploadDate { get; set; }
+        public DateTime UploadDate { get; set; } = DateTime.Now;
 
         //references the researcher who has uploaded the file (a different table)
-        public Researcher Researcher { get; set; }
+        public Researcher? Researcher { get; set; }
     }
 }

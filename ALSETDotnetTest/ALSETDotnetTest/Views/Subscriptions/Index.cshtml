@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ALSETDotnetTest.Models.Subscription>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Subscriber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubscribedTo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subscriber.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubscribedTo.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SubscriptionId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SubscriptionId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SubscriptionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

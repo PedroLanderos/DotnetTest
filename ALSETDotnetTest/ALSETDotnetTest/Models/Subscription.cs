@@ -15,7 +15,7 @@ namespace ALSETDotnetTest.Models
         public int SubscribedToId { get; set; }
 
         //references the foreing keys to validate the suscriptions 
-        public Researcher Subscriber { get; set; } //references the current researcher who wants to suscribe
-        public Researcher SubscribedTo { get; set; }//references the researcher to suscribe
+        public Researcher? Subscriber { get; set; } //references the current researcher who wants to suscribe
+        public Researcher? SubscribedTo { get; set; }//references the researcher to suscribe
     }
 }
