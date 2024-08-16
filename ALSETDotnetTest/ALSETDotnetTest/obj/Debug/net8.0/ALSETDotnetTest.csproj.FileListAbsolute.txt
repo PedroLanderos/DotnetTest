@@ -252,3 +252,6 @@ D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\runtimes\win\lib\
 D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\itextsharp.dll
+D:\Code\ALSET\ALSETDotnetTest\ALSETDotnetTest\bin\Debug\net8.0\Magick.NET.Core.dll

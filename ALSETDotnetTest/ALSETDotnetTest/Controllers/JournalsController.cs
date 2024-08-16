@@ -6,6 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ALSETDotnetTest.Models;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using ImageMagick;
+using System.IO;
 
 namespace ALSETDotnetTest.Controllers
 {
@@ -107,6 +112,7 @@ namespace ALSETDotnetTest.Controllers
                     await UploadedFile.CopyToAsync(stream);
                 }
 
+
                 // Crear el registro del Journal en la base de datos
                 var journal = new Journal
                 {
@@ -126,30 +132,32 @@ namespace ALSETDotnetTest.Controllers
             return View();
         }
 
+
+
         //view the pdf
+        // GET: Journals/View/5
         [HttpGet]
         public IActionResult ViewPDF(int id)
         {
-            // Obtener el registro del journal en la base de datos
-            var journal = _context.Journals.FirstOrDefault(j => j.JournalId == id);
+            var journal = _context.Journals.Find(id);
             if (journal == null)
             {
                 return NotFound();
             }
 
-            // Ruta completa del archivo
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), journal.FilePath);
-
+            var filePath = journal.FilePath;
             if (!System.IO.File.Exists(filePath))
             {
                 return NotFound();
             }
 
-            // Leer el archivo como bytes
-            var fileBytes = System.IO.File.ReadAllBytes(filePath);
+            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            var contentType = "application/pdf";
+            var fileName = journal.FileName;
 
-            return File(fileBytes, "application/pdf");
+            return File(fileStream, contentType, fileName);
         }
+
 
 
 
