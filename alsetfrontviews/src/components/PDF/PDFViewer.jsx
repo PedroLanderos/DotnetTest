@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import './PDFViewer.css'; // Asegúrate de crear este archivo CSS
+import './PDFViewer.css'; // Asegúrate de tener este archivo CSS
 
 const PDFViewer = () => {
     const [filePath, setFilePath] = useState('');
@@ -24,7 +24,6 @@ const PDFViewer = () => {
 
     return (
         <div className="pdf-viewer-wrapper">
-            <h1>PDF Viewer</h1>
             <div className="pdf-container">
                 {filePath && (
                     <embed
