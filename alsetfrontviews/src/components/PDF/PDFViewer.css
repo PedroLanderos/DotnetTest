@@ -1,0 +1,23 @@
+.pdf-viewer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.pdf-container {
+    width: 80%;
+    max-width: 1200px; /* Tamaño máximo del visor */
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-embed {
+    width: 100%;
+    height: 100%;
+    border: none; /* Elimina los bordes */
+}

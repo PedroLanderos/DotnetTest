@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { FaUser } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate, Link } from 'react-router-dom'; // Importa Link
 import { AuthContext } from '../AuthContext'; 
 import './Login.css';
 
@@ -47,7 +47,7 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
                 <div className="register-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
+                    <p>Don't have an account? <Link to="/register">Register</Link></p> {/* Usa Link en lugar de <a> */}
                 </div>
             </form>
         </div>

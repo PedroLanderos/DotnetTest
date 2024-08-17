@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './ResearcherJournal.css';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const ResearcherJournals = () => {
     const [journals, setJournals] = useState([]);
     const [isSubscribed, setIsSubscribed] = useState(false);
-    const { currentResearcherId, researcherId } = useParams(); // Obtén ambos IDs desde los parámetros de la ruta
+    const { currentResearcherId, researcherId } = useParams();
+    const navigate = useNavigate(); // Para redirigir a la vista del PDF
 
-    console.log('Current Researcher ID:', currentResearcherId);
-    console.log('Researcher to subscribe ID:', researcherId);
-    
     useEffect(() => {
         if (!currentResearcherId) {
             console.error('Current researcher ID is not available.');
@@ -20,11 +18,7 @@ const ResearcherJournals = () => {
         const checkSubscription = async () => {
             try {
                 const response = await axios.get(`https://localhost:7221/Subscriptions/IsSubscribed/${currentResearcherId}/${researcherId}`);
-                if (response.status === 200) {
-                    setIsSubscribed(true);
-                } else {
-                    setIsSubscribed(false);
-                }
+                setIsSubscribed(response.status === 200);
                 fetchJournals();
             } catch (error) {
                 console.error('Error checking subscription:', error);
@@ -35,8 +29,6 @@ const ResearcherJournals = () => {
         const fetchJournals = async () => {
             try {
                 const response = await axios.get(`https://localhost:7221/Journals/GetJournalsByResearcher/${researcherId}`);
-                console.log('Journals response data:', response.data);
-                
                 if (Array.isArray(response.data)) {
                     setJournals(response.data);
                 } else {
@@ -49,7 +41,7 @@ const ResearcherJournals = () => {
 
         checkSubscription();
     }, [researcherId, currentResearcherId]);
-    
+
     return (
         <div className="wrapper">
             <h1>Journals of Researcher {researcherId}</h1>
@@ -71,7 +63,7 @@ const ResearcherJournals = () => {
                                     <td>
                                         <button 
                                             className="view-button" 
-                                            onClick={() => window.open(`https://localhost:7221/Journals/ViewPDF/${journal.journalId}`, '_blank')}
+                                            onClick={() => navigate(`/pdf-viewer?id=${journal.journalId}`)}
                                         >
                                             View
                                         </button>

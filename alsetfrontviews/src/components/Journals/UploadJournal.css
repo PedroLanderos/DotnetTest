@@ -59,6 +59,7 @@
     font-size: 1rem; /* Ajusta el tamaño de la fuente */
     color: #333;
     font-weight: 700;
+    margin: 5px 0 10px 0 ;
 }
 
 .login-wrapper .register-link{

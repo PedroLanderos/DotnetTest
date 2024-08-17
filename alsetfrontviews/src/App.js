@@ -20,7 +20,8 @@ function App() {
                         <Route path="/researchers" element={<Researchers />} />
                         <Route path="/journals" element={<Journals />} />
                         <Route path="/register" element={<Register />} />
-                        <Route path='upload-journal' element={< UploadJournal/>}/>
+                        <Route path='/upload-journal' element={<UploadJournal />} />
+                        <Route path='/pdf-viewer' element={<PDFViewer />} /> {/* Nueva ruta para PDFViewer */}
                     </Routes>
                 </Router>
             </AuthProvider>

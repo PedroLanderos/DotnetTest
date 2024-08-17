@@ -138,6 +138,18 @@ namespace ALSETDotnetTest.Controllers
             return View();
         }
 
+        [HttpGet("GetFilePath/{id}")]
+        public IActionResult GetFilePath(int id)
+        {
+            var journal = _context.Journals.Find(id);
+            if (journal == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(journal.FilePath); // Devuelve la ruta del archivo
+        }
+
 
         // GET: Journals/ByResearcher/5
         [HttpGet("/Journals/GetJournalsByResearcher/{researcherId}")]

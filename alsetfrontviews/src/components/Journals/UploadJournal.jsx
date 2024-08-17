@@ -46,7 +46,7 @@ const UploadJournal = () => {
     }, [researcherId]);
 
     return (
-        <div className="upload-wrapper">
+        <div className="login-wrapper">
             <form onSubmit={handleLogin}>
                 <h1>Upload file</h1>
                 <div className="input-box">

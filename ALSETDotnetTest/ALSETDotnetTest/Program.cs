@@ -1,5 +1,6 @@
 using ALSETDotnetTest.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +35,14 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+var fileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "Files"));
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = fileProvider,
+    RequestPath = "/Files"
+});
+
 
 app.UseRouting();
 
