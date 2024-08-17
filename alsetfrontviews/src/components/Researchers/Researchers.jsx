@@ -53,14 +53,23 @@ const Researchers = () => {
 
     return (
         <div className="researchers-wrapper">
-            <h1>Researchers</h1>
+            <div className="header">
+                <h1>Researchers</h1>
+                <button 
+                    className="subscribe-button" 
+                    onClick={() => navigate('/upload-journal')}
+                >
+                    Upload
+                </button>
+            </div>
             <table className="table">
                 <thead>
                     <tr>
-                        <th>ID</th> {/* Nueva columna ID */}
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Joined Date</th>
                         <th>Total Journals Uploaded</th>
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -68,7 +77,7 @@ const Researchers = () => {
                     {Array.isArray(researchers) && researchers.length > 0 ? (
                         researchers.map(researcher => (
                             <tr key={researcher.researcherId}>
-                                <td>{researcher.researcherId}</td> {/* Mostrar el ID del investigador */}
+                                <td>{researcher.researcherId}</td>
                                 <td>{researcher.name}</td>
                                 <td>{new Date(researcher.joinedDate).toLocaleDateString()}</td>
                                 <td>{researcher.totalJournalsUploaded}</td>
@@ -77,7 +86,7 @@ const Researchers = () => {
                                         className="subscribe-button" 
                                         onClick={() => handleSubscribe(researcher.researcherId)}
                                     >
-                                        Suscribe
+                                        Subscribe
                                     </button>
                                 </td>
                                 <td>
@@ -92,7 +101,7 @@ const Researchers = () => {
                         ))
                     ) : (
                         <tr>
-                            <td colSpan="5">No researchers found</td> {/* Ajustado colSpan para la nueva columna */}
+                            <td colSpan="6">No researchers found</td>
                         </tr>
                     )}
                 </tbody>

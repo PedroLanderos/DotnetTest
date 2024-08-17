@@ -7,6 +7,7 @@ import PDFViewer from './components/PDF/PDFViewer';
 import Researchers from './components/Researchers/Researchers';
 import Journals from './components/Journals/Journal';
 import ResearcherJournals from './components/Researchers/ResearcherJournals';
+import UploadJournal from './components/Journals/UploadJournal';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                         <Route path="/researchers" element={<Researchers />} />
                         <Route path="/journals" element={<Journals />} />
                         <Route path="/register" element={<Register />} />
+                        <Route path='upload-journal' element={< UploadJournal/>}/>
                     </Routes>
                 </Router>
             </AuthProvider>
