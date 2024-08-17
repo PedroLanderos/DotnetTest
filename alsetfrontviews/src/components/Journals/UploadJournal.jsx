@@ -1,28 +1,33 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom'; 
-import { AuthContext } from '../AuthContext'; 
+import { AuthContext } from '../AuthContext';  //use the main context to preserv the current id
 import './UploadJournal.css';
 
 const UploadJournal = () => {
+    //use the value par as a flag to show and send data
     const [description, setDescription] = useState('');
     const [file, setFile] = useState(null);
     const { researcherId, setResearcherId } = useContext(AuthContext); 
-    const navigate = useNavigate(); 
+    const navigate = useNavigate(); //init a react router function to include the posiblity to navegate from this component
 
+    //the event from the upload button that calls the backend api
     const handleLogin = async (e) => {
         e.preventDefault();
+        //if the file is empty end the proccess 
         if (!file) {
             console.error('No file selected.');
             return;
         }
-
+        
+        //the data is send by multipart/form-data form, so an option could be create and object and attach the values from the main form 
         const formData = new FormData();
         formData.append('ResearcherId', researcherId);
         formData.append('Description', description);
         formData.append('UploadedFile', file);
 
         try {
+            //call the endpoint to create a new register from the journals table (see backend apis documentation)
             const response = await axios.post('https://localhost:7221/Journals/CreateNew', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
@@ -31,17 +36,18 @@ const UploadJournal = () => {
 
             if (response.status === 200) {
                 console.log('Upload successful:', response.data);
-                navigate('/researchers'); // Redirige a la página de Researchers
+                //if the repsonse is 200 (response ok) navegate to researches endpoint to see all the journals
+                navigate('/researchers');  
             }
         } catch (error) {
             console.error('Upload failed:', error);
         }
     };
 
-    // Log el ID guardado cada vez que researcherId cambie
+    //as for a reason the context get lost after going through the view button a log was needed in order to see the real time value
     useEffect(() => {
         if (researcherId) {
-            console.log('ID guardado en el contexto:', researcherId);
+            console.log('id context:', researcherId);
         }
     }, [researcherId]);
 

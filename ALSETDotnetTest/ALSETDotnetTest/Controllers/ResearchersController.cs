@@ -71,22 +71,20 @@ namespace ALSETDotnetTest.Controllers
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error al guardar en la base de datos: {ex.Message}");
-                    // Puedes retornar una vista de error o manejarlo según tu necesidad
-                    ModelState.AddModelError(string.Empty, "Error al guardar los datos en la base de datos.");
+                    Console.WriteLine($"Error: {ex.Message}");
+                    ModelState.AddModelError(string.Empty, "Error.");
                 }
             }
             else
             {
-                // Log si el modelo no es válido
-                Console.WriteLine("El modelo no es válido. Errores:");
+                Console.WriteLine("bad request:");
                 foreach (var error in ModelState)
                 {
-                    Console.WriteLine($"Clave: {error.Key}, Errores: {string.Join(", ", error.Value.Errors.Select(e => e.ErrorMessage))}");
+                    Console.WriteLine($"key: {error.Key}, error: {string.Join(", ", error.Value.Errors.Select(e => e.ErrorMessage))}");
                 }
             }
 
-            // Si hay errores, retornar la misma vista con los datos del investigador
+            //return the predeterminated view if is a bad request
             return View(researcher);
         }
 

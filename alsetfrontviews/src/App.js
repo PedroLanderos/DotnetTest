@@ -21,7 +21,7 @@ function App() {
                         <Route path="/journals" element={<Journals />} />
                         <Route path="/register" element={<Register />} />
                         <Route path='/upload-journal' element={<UploadJournal />} />
-                        <Route path='/pdf-viewer' element={<PDFViewer />} /> {/* Nueva ruta para PDFViewer */}
+                        <Route path='/pdf-viewer' element={<PDFViewer />} /> {}
                     </Routes>
                 </Router>
             </AuthProvider>

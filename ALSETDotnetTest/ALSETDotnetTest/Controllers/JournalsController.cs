@@ -29,10 +29,11 @@ namespace ALSETDotnetTest.Controllers
         public async Task<IActionResult> Index()
         {
             var journals = await _context.Journals.ToListAsync();
-            return Ok(journals);
+            return Ok(journals); //change to get the response into json so the react view could interpretate the data (html was original set)
         }
 
         // GET: Journals/Details/5
+        //endpoint created by vs to show a view from a specific value
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -53,19 +54,18 @@ namespace ALSETDotnetTest.Controllers
         }
 
         // GET: Journals/Create
+        //endpoint created by vs
         public IActionResult Create()
         {
             ViewData["ResearcherId"] = new SelectList(_context.Researchers, "ResearcherId", "Name");
             return View();
         }
 
-        
-
 
         // POST: Journals/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost] //post endpoint to get a view created by vs
         public async Task<IActionResult> Create([Bind("ResearcherId,FileName,FilePath,Description")] Journal journal)
         {
             if (ModelState.IsValid)
@@ -77,10 +77,10 @@ namespace ALSETDotnetTest.Controllers
             else
             {
                 // Log si el modelo no es válido
-                Console.WriteLine("El modelo no es válido. Errores:");
+                Console.WriteLine("Error:");
                 foreach (var error in ModelState)
                 {
-                    Console.WriteLine($"Clave: {error.Key}, Errores: {string.Join(", ", error.Value.Errors.Select(e => e.ErrorMessage))}");
+                    Console.WriteLine($"Clave: {error.Key}, Error: {string.Join(", ", error.Value.Errors.Select(e => e.ErrorMessage))}");
                 }
             }
             ViewData["ResearcherId"] = new SelectList(_context.Researchers, "ResearcherId", "Name", journal.ResearcherId);
@@ -88,38 +88,38 @@ namespace ALSETDotnetTest.Controllers
         }
 
 
-        //new create version
+        //new create version (also a post request)
         [HttpPost]
         public async Task<IActionResult> CreateNew(int ResearcherId, string Description, IFormFile UploadedFile)
         {
+            //checks the pdf file 
             if (UploadedFile == null || Path.GetExtension(UploadedFile.FileName).ToLower() != ".pdf")
             {
                 ModelState.AddModelError("File", "Only PDF files are allowed.");
                 ViewData["ResearcherId"] = new SelectList(_context.Researchers, "ResearcherId", "Name");
-                return View();
+                return View(); // Devuelve la vista con el mensaje de error
             }
 
             if (ModelState.IsValid)
             {
-                // Generar el nombre y la ruta del archivo
+                //creates the name using the next structure: ((Files/id/name);
                 var fileName = Path.GetFileName(UploadedFile.FileName);
                 var researcherFolder = Path.Combine("Files", ResearcherId.ToString());
                 var filePath = Path.Combine(researcherFolder, fileName);
 
-                // Crear la carpeta si no existe
+                //if directory is empty then create it 
                 if (!Directory.Exists(researcherFolder))
                 {
                     Directory.CreateDirectory(researcherFolder);
                 }
 
-                // Guardar el archivo en el servidor
+                //save the file path
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
                     await UploadedFile.CopyToAsync(stream);
                 }
 
-
-                // Crear el registro del Journal en la base de datos
+                //creates the jounal obecjt (it's the base model) and the inserts into the database
                 var journal = new Journal
                 {
                     ResearcherId = ResearcherId,
@@ -130,6 +130,15 @@ namespace ALSETDotnetTest.Controllers
                 };
 
                 _context.Add(journal);
+
+                //everytime that a reseracher uploads a journal the the TotalJournalsUploaded increments by 1
+                var researcher = await _context.Researchers.FindAsync(ResearcherId);
+                if (researcher != null)
+                {
+                    researcher.TotalJournalsUploaded++;
+                    _context.Update(researcher);
+                }
+
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -137,6 +146,7 @@ namespace ALSETDotnetTest.Controllers
             ViewData["ResearcherId"] = new SelectList(_context.Researchers, "ResearcherId", "Name");
             return View();
         }
+
 
         [HttpGet("GetFilePath/{id}")]
         public IActionResult GetFilePath(int id)

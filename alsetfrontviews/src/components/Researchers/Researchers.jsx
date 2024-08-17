@@ -11,16 +11,16 @@ const Researchers = () => {
 
     const handleViewJournals = (id) => {
         setResearcherId(researcherId);
-        navigate(`/researcher-journals/${researcherId}/${id}`); // Redirige a la nueva vista
+        navigate(`/researcher-journals/${researcherId}/${id}`); 
     };
 
     useEffect(() => {
         const fetchResearchers = async () => {
             try {
-                const response = await axios.get('https://localhost:7221/Researchers'); // Endpoint del backend
-                console.log('Response data:', response.data); // Log para verificar el formato de la respuesta
+                const response = await axios.get('https://localhost:7221/Researchers'); // endpoint from the backend
+                console.log('Response data:', response.data); // log
                 
-                // Verificar si la respuesta es un array
+                // array of objects
                 if (Array.isArray(response.data)) {
                     setResearchers(response.data);
                 } else {

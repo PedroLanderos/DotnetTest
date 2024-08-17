@@ -1,0 +1,538 @@
+{
+	"info": {
+		"_postman_id": "cb8e0599-f37f-463d-9637-e63235bd54d0",
+		"name": "ASLET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37283507"
+	},
+	"item": [
+		{
+			"name": "Researchers",
+			"item": [
+				{
+					"name": "Insert a researcher",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Name",
+									"value": "Test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/Researchers/Create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Researchers",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the researchers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Researchers",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Researchers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Researchers/Details/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Researchers",
+								"Details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Name",
+									"value": "NuevoNombre",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/Researchers/Edit/4",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Researchers",
+								"Edit",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Researchers/Delete/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Researchers",
+								"Delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Journals",
+			"item": [
+				{
+					"name": "Create a journal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ResearcherId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "FileName",
+									"value": "TestFileName",
+									"type": "text"
+								},
+								{
+									"key": "FilePath",
+									"value": "Test/File",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "This is a test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/Journals/Create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the journals",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Journals",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Journals/Details/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get path by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Journals/Details/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View pdf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Journals/Details/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "FileName",
+									"value": "NewFileName",
+									"type": "text"
+								},
+								{
+									"key": "FilePath",
+									"value": "Test/newName",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "This is a test update",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/Journals/Edit/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Journals/Delete/33",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Delete",
+								"33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create 2.0",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Journals/Create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get journals by searcher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Journals/GetJournalsByResearcher/5",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Journals",
+								"GetJournalsByResearcher",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscriptions",
+			"item": [
+				{
+					"name": "Suscribe",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "SubscriberId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "SubscribedToId",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{server}}/Subscriptions/Create",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Subscriptions",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the subscriptions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Subscriptions",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Is it subscribed?",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/Subscriptions",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Subscriptions/Details/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Subscriptions",
+								"Details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a subscription",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/Subscriptions/Delete/1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"Subscriptions",
+								"Delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

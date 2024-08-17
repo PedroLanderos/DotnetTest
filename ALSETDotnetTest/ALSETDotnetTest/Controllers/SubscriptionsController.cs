@@ -162,10 +162,10 @@ namespace ALSETDotnetTest.Controllers
 
             if (subscriptionExists)
             {
-                return Ok();  // El usuario está suscrito, código de estado 200
+                return Ok();  //if there is a match then the user is subscribed and the response is 200
             }
 
-            return BadRequest();  // El usuario no está suscrito, código de estado 400
+            return BadRequest();  //if not then the response will be 400 (used in a front end axios view)
         }
 
 

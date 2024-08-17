@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import './PDFViewer.css'; // Asegúrate de tener este archivo CSS
+import './PDFViewer.css'; 
 
 const PDFViewer = () => {
     const [filePath, setFilePath] = useState('');
     const query = new URLSearchParams(window.location.search);
-    const journalId = query.get('id'); // Obtener la ID del journal de la URL
+    //the id from the journal is send by the url in the main app 
+    const journalId = query.get('id'); 
 
+    //onload
     useEffect(() => {
         const fetchFilePath = async () => {
             try {
+                //invoke the endpoint that gives the route of the id archive 
                 const response = await axios.get(`https://localhost:7221/GetFilePath/${journalId}`);
-                setFilePath(response.data); // Establecer la ruta del archivo
+                setFilePath(response.data); 
             } catch (error) {
-                console.error('Error fetching file path:', error);
+                console.error('error: ', error);
             }
         };
 
@@ -27,7 +30,7 @@ const PDFViewer = () => {
             <div className="pdf-container">
                 {filePath && (
                     <embed
-                        src={`https://localhost:7221/${filePath}#toolbar=0`}
+                        src={`https://localhost:7221/${filePath}#toolbar=0`} //delete the tool bar so the user is not able to download the pdf
                         type="application/pdf"
                         className="pdf-embed"
                     />

@@ -1,3 +1,5 @@
+/*Styles inspired by another github repository*/
+
 .login-wrapper {
     width: 90%;
     max-width: 420px;
@@ -6,11 +8,11 @@
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
-    margin: 0 auto; /* Centra el contenedor */
+    margin: 0 auto; 
 }
 
 .login-wrapper h1{
-    font-size: 2.25rem; /* Ajusta el tamaño de la fuente */
+    font-size: 2.25rem; 
     text-align: center;
 }
 
@@ -29,7 +31,7 @@
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    font-size: 1rem; 
     color: #fff;
     padding: 20px 45px 20px 20px;
 }
@@ -43,7 +45,7 @@
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    font-size: 1rem; 
     color: #fff;
 }
 
@@ -56,14 +58,14 @@
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    font-size: 1rem; 
     color: #333;
     font-weight: 700;
     margin: 5px 0 10px 0 ;
 }
 
 .login-wrapper .register-link{
-    font-size: 0.9rem; /* Ajusta el tamaño de la fuente */
+    font-size: 0.9rem; 
     text-align: center;
     margin: 20px 0 15px;
 }
@@ -78,7 +80,7 @@
     text-decoration: underline;
 }
 
-/* Media queries para pantallas pequeñas */
+/* responsive */
 @media (max-width: 768px) {
     .login-wrapper {
         padding: 20px;

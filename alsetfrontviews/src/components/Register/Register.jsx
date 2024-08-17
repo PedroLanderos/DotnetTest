@@ -1,32 +1,30 @@
 import React, { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import './Register.css';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigat
+import { useNavigate } from 'react-router-dom'; 
 
 const Register = () => {
     const [name, setName] = useState("");
-    const navigate = useNavigate(); // Usa useNavigate
+    const navigate = useNavigate(); //init a react router function to include the posiblity to navegate from this component
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Realizar la solicitud al endpoint
         try {
-            const response = await fetch('https://localhost:7221/Researchers/Create', { // Asegúrate de ajustar la URL
-                method: 'POST',
+            const response = await fetch('https://localhost:7221/Researchers/Create', {//invoke the endpoint to create a new user based on the naem
+                method: 'POST', 
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json', //the body is in json
                 },
-                body: JSON.stringify({ Name: name }),
+                body: JSON.stringify({ Name: name }), //transform the input into json
             });
 
             if (response.ok) {
                 navigate('/Login');
-                console.log('Registro exitoso');
             } else {
-                console.error('Error al registrar');
+                console.error('Error');
             }
         } catch (error) {
-            console.error('Error al realizar la solicitud:', error);
+            console.error('Error:', error);
         }
     };
 
