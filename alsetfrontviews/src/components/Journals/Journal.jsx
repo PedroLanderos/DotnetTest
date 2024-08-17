@@ -38,21 +38,21 @@ const Journals = () => {
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th></th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {Array.isArray(journals) && journals.length > 0 ? (
                         journals.map(journal => (
                             <tr key={journal.journalId}>
-                                <td>{journal.journalId}</td>
-                                <td>{journal.fileName}</td>
-                                <td>
+                                <td data-label="ID">{journal.journalId}</td>
+                                <td data-label="Name">{journal.fileName}</td>
+                                <td data-label="Actions">
                                     <button 
                                         className="view-button" 
                                         onClick={() => handleViewPDF(journal.journalId)}
                                     >
-                                        Visualizar
+                                        View
                                     </button>
                                 </td>
                             </tr>

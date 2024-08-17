@@ -12,6 +12,7 @@ using iTextSharp.text.pdf;
 using ImageMagick;
 using System.IO;
 using Microsoft.JSInterop.Implementation;
+using Microsoft.AspNetCore.Mvc.Razor.Compilation;
 
 namespace ALSETDotnetTest.Controllers
 {
@@ -42,6 +43,7 @@ namespace ALSETDotnetTest.Controllers
             var journal = await _context.Journals
                 .Include(j => j.Researcher)
                 .FirstOrDefaultAsync(m => m.JournalId == id);
+
             if (journal == null)
             {
                 return NotFound();
@@ -56,6 +58,9 @@ namespace ALSETDotnetTest.Controllers
             ViewData["ResearcherId"] = new SelectList(_context.Researchers, "ResearcherId", "Name");
             return View();
         }
+
+        
+
 
         // POST: Journals/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -133,6 +138,22 @@ namespace ALSETDotnetTest.Controllers
             return View();
         }
 
+
+        // GET: Journals/ByResearcher/5
+        [HttpGet("/Journals/GetJournalsByResearcher/{researcherId}")]
+        public async Task<IActionResult> GetJournalsByResearcher(int researcherId)
+        {
+            var journals = await _context.Journals
+                                         .Where(j => j.ResearcherId == researcherId)
+                                         .ToListAsync();
+
+            if (journals == null || journals.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(journals);
+        }
 
 
         //view the pdf

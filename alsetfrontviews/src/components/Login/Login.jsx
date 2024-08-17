@@ -1,14 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { FaUser } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
-import { AuthContext } from '../AuthContext'; // Importa el contexto
+import { useNavigate } from 'react-router-dom'; 
+import { AuthContext } from '../AuthContext'; 
 import './Login.css';
 
 const Login = () => {
     const [id, setId] = useState('');
-    const { setResearcherId } = useContext(AuthContext); // Usa el contexto
-    const navigate = useNavigate(); // Usa useNavigate
+    const { researcherId, setResearcherId } = useContext(AuthContext); // Usa el contexto
+    const navigate = useNavigate(); 
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -23,6 +23,13 @@ const Login = () => {
             console.error('Login failed:', error);
         }
     };
+
+    // Log el ID guardado cada vez que researcherId cambie
+    useEffect(() => {
+        if (researcherId) {
+            console.log('ID guardado en el contexto:', researcherId);
+        }
+    }, [researcherId]); // Ejecuta cuando researcherId cambie
 
     return (
         <div className="login-wrapper">

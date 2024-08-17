@@ -2,10 +2,17 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from '../AuthContext'; // Importa el contexto
 import './Researchers.css';
+import { useNavigate } from 'react-router-dom';
 
 const Researchers = () => {
     const [researchers, setResearchers] = useState([]);
-    const { researcherId } = useContext(AuthContext); // Usa el contexto para obtener el ID del investigador
+    const { researcherId, setResearcherId } = useContext(AuthContext); // Usa el contexto para obtener el ID del investigador
+    const navigate = useNavigate();
+
+    const handleViewJournals = (id) => {
+        setResearcherId(researcherId);
+        navigate(`/researcher-journals/${researcherId}/${id}`); // Redirige a la nueva vista
+    };
 
     useEffect(() => {
         const fetchResearchers = async () => {
@@ -71,6 +78,14 @@ const Researchers = () => {
                                         onClick={() => handleSubscribe(researcher.researcherId)}
                                     >
                                         Suscribe
+                                    </button>
+                                </td>
+                                <td>
+                                    <button 
+                                        className="view-button" 
+                                        onClick={() => handleViewJournals(researcher.researcherId)}
+                                    >
+                                        View Journals
                                     </button>
                                 </td>
                             </tr>

@@ -79,6 +79,7 @@ namespace ALSETDotnetTest.Controllers
             return View(subscription);
         }
 
+
         // GET: Subscriptions/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -152,6 +153,21 @@ namespace ALSETDotnetTest.Controllers
 
             return View(subscription);
         }
+
+        [HttpGet("/Subscriptions/IsSubscribed/{subscriberId}/{subscribedToId}")]
+        public async Task<IActionResult> IsSubscribed(int subscriberId, int subscribedToId)
+        {
+            var subscriptionExists = await _context.Subscriptions
+                .AnyAsync(s => s.SubscriberId == subscriberId && s.SubscribedToId == subscribedToId);
+
+            if (subscriptionExists)
+            {
+                return Ok();  // El usuario está suscrito, código de estado 200
+            }
+
+            return BadRequest();  // El usuario no está suscrito, código de estado 400
+        }
+
 
         // POST: Subscriptions/Delete/5
         [HttpDelete]

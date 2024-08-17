@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ALSETDotnetTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c8da5ef26b78ca7750fe1c18d698659e2d14882")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b86be233680d0330b40e9c46b66b13a26bb17085")]
 [assembly: System.Reflection.AssemblyProductAttribute("ALSETDotnetTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ALSETDotnetTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
